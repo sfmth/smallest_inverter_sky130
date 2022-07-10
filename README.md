@@ -1,5 +1,5 @@
 # smallest_inverter_sky130
-The smallest inverter that doesn't violate sky130's DRC
+The smallest inverter that doesn't violate skywater130's DRC
 
 # 1.3 x 2.45 um
 
