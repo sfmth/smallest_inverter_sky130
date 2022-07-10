@@ -1,0 +1,56 @@
+Inverter Simulation
+* this file edited to remove everything not in tt lib
+* .lib "./sky130_fd_pr/models/sky130.lib.spice" tt
+.lib "/home/farhad/bin/Caravel_user_project/pdk/skywater-pdk/libraries/sky130_fd_pr/latest/models/sky130.lib.spice" tt
+
+* instantiate the inverter
+Xinv A VGND VNB VPB VPWR Y smallest_inv
+
+.subckt smallest_inv A VGND VNB VPB VPWR Y
+
+* NGSPICE file created from inverter.ext - technology: sky130A
+
+
+* Top level circuit inverter
+
+X0 VPWR A Y VPB sky130_fd_pr__pfet_01v8 ad=2.025e+11p pd=1.8e+06u as=1.8e+11p ps=1.7e+06u w=450000u l=150000u
+X1 VGND A Y VNB sky130_fd_pr__nfet_01v8 ad=2.025e+11p pd=1.8e+06u as=1.8e+11p ps=1.7e+06u w=450000u l=150000u
+C0 VPB w_n110_250# 0.02fF
+C1 A Y 0.05fF
+C2 A VPB 0.12fF
+C3 VNB Y 0.19fF
+C4 VPB VNB 0.07fF
+C5 A VNB 0.11fF
+C6 VPB Y 0.20fF
+C7 Y w_n110_250# 0.00fF
+C8 VNB VSUBS 0.19fF
+C9 Y VSUBS 0.16fF
+C10 VPB VSUBS 0.20fF
+C11 A VSUBS 0.25fF
+C12 w_n110_250# VSUBS 0.17fF
+.end
+
+.ends
+
+* set gnd and power
+Vgnd VGND 0 0
+Vdd VPWR VGND 1.8
+
+* create a resistor between the MOSFET drain and VPWR
+R VPWR DRAIN 10k
+
+* create pulse
+Va A VGND pulse(0 1.8 50p 10p 10p 200p 500p)
+
+* setup the transient analysis
+.tran .1p 350p 0
+
+.control
+run
+set color0 = white
+set color1 = black
+set gnuplot_terminal=xterm
+gnuplot sde A Y
+.endc
+
+.end

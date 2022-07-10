@@ -1,0 +1,101 @@
+magic
+tech sky130A
+timestamp 1657447539
+<< nwell >>
+rect -50 210 78 230
+rect -55 125 85 210
+<< nmos >>
+rect 5 35 20 80
+<< pmos >>
+rect 5 145 20 190
+<< ndiff >>
+rect -35 70 5 80
+rect -35 40 -25 70
+rect -5 40 5 70
+rect -35 35 5 40
+rect 20 75 65 80
+rect 20 40 35 75
+rect 55 40 65 75
+rect 20 35 65 40
+<< pdiff >>
+rect -35 185 5 190
+rect -35 150 -25 185
+rect -5 150 5 185
+rect -35 145 5 150
+rect 20 185 65 190
+rect 20 150 35 185
+rect 55 150 65 185
+rect 20 145 65 150
+<< ndiffc >>
+rect -25 40 -5 70
+rect 35 40 55 75
+<< pdiffc >>
+rect -25 150 -5 185
+rect 35 150 55 185
+<< poly >>
+rect 5 190 20 205
+rect 5 125 20 145
+rect -35 120 20 125
+rect -35 100 -25 120
+rect -5 100 20 120
+rect -35 95 20 100
+rect 5 80 20 95
+rect 5 20 20 35
+<< polycont >>
+rect -25 100 -5 120
+<< locali >>
+rect -50 210 -35 230
+rect -15 210 5 230
+rect 25 210 45 230
+rect 65 210 80 230
+rect -35 185 5 210
+rect -35 150 -25 185
+rect -5 150 5 185
+rect -35 145 5 150
+rect 25 185 65 190
+rect 25 150 35 185
+rect 55 150 65 185
+rect -35 120 5 125
+rect -35 100 -25 120
+rect -5 100 5 120
+rect -35 95 5 100
+rect 25 75 65 150
+rect -35 70 5 75
+rect -35 40 -25 70
+rect -5 40 5 70
+rect -35 15 5 40
+rect 25 40 35 75
+rect 55 40 65 75
+rect 25 35 65 40
+rect -50 -5 -35 15
+rect -15 -5 5 15
+rect 25 -5 45 15
+rect 65 -5 80 15
+<< viali >>
+rect -35 210 -15 230
+rect 5 210 25 230
+rect 45 210 65 230
+rect -35 -5 -15 15
+rect 5 -5 25 15
+rect 45 -5 65 15
+<< metal1 >>
+rect -50 230 80 235
+rect -50 210 -35 230
+rect -15 210 5 230
+rect 25 210 45 230
+rect 65 210 80 230
+rect -50 190 80 210
+rect -50 15 80 35
+rect -50 -5 -35 15
+rect -15 -5 5 15
+rect 25 -5 45 15
+rect 65 -5 80 15
+rect -50 -10 80 -5
+<< labels >>
+rlabel locali 35 105 55 125 1 Y
+rlabel polycont -25 100 -5 120 1 A
+rlabel viali -35 210 -15 230 1 VPB
+rlabel viali -35 210 -15 230 1 VPWR
+rlabel viali -35 -5 -15 15 1 VNB
+rlabel viali -35 -5 -15 15 1 VGND
+<< end >>

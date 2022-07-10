@@ -1,0 +1,22 @@
+* NGSPICE file created from inverter.ext - technology: sky130A
+
+
+* Top level circuit inverter
+
+X0 Y A VPB w_n110_250# sky130_fd_pr__pfet_01v8 ad=2.025e+11p pd=1.8e+06u as=1.8e+11p ps=1.7e+06u w=450000u l=150000u
+X1 Y A VNB VSUBS sky130_fd_pr__nfet_01v8 ad=2.025e+11p pd=1.8e+06u as=1.8e+11p ps=1.7e+06u w=450000u l=150000u
+C0 VPB w_n110_250# 0.02fF
+C1 A Y 0.05fF
+C2 A VPB 0.12fF
+C3 VNB Y 0.19fF
+C4 VPB VNB 0.07fF
+C5 A VNB 0.11fF
+C6 VPB Y 0.20fF
+C7 Y w_n110_250# 0.00fF
+C8 VNB VSUBS 0.19fF
+C9 Y VSUBS 0.16fF
+C10 VPB VSUBS 0.20fF
+C11 A VSUBS 0.25fF
+C12 w_n110_250# VSUBS 0.17fF
+.end
+
